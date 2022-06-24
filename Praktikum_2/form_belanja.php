@@ -52,7 +52,7 @@
   </div> 
   <div class="form-group row">
     <div class="offset-4 col-8">
-      <button name="submit" type="submit" class="btn btn-primary">Kirim</button>
+      <button name="proses" type="submit" class="btn btn-primary">Kirim</button>
     </div>
   </div>
 </form>
@@ -76,7 +76,7 @@
 			</div>
             <div class="m-4">
             <?php
-           
+            $hasil = $_POST['proses']
             $customer = $_POST['customer'];
             $produk = $_POST['produk'];
             $jumlah = $_POST['jumlah'];
@@ -88,7 +88,7 @@
             } elseif ($produk == 'mesin_cuci') {
                 $harga = $jumlah * 3800000;
             } 
-            
+            echo 'Hasil'.$hasil;
             echo '<br/>Nama Customer : ' .$customer;
             echo '<br/>Produk Pilihan : ' .$produk;
             echo '<br/>Jumlah Beli : ' .$jumlah;
